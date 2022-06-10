@@ -1,0 +1,31 @@
+{
+    "name": "@ks/code-to-type",
+    "version": "0.0.9",
+    "description": "js代码字符串转ts-type的库",
+    "main": "./dist/index.js",
+    "types": "./@types",
+    "scripts": {
+        "test": "jest test/index.spec.ts",
+        "build": "rm -rf dist && rm -rf @types && tsc",
+        "publish-ks": "npm publish --registry https://npm.corp.kuaishou.com"
+    },
+    "keywords": [
+        "ts",
+        "typescript",
+        "type",
+        "js2ts"
+    ],
+    "author": "songqian",
+    "license": "ISC",
+    "dependencies": {
+        "prettier": "^2.4.1",
+        "typescript": "^4.4.3"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.3",
+        "@types/node": "^16.9.2",
+        "@types/prettier": "^2.3.2",
+        "jest": "^27.4.3",
+        "ts-jest": "^27.1.0"
+    }
+}
