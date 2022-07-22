@@ -1,4 +1,4 @@
-import { DEFAULT_NUMBER_KEY, CLOSE_BRACE_TOKEN, OPEN_BRACE_TOKEN } from './config';
+import { DEFAULT_NUMBER_KEY, CLOSE_BRACE_TOKEN, OPEN_BRACE_TOKEN, DEFAULT_JSON_KEY } from './config';
 import { ArrayType, createNodeString, NodeType, ObjectType, PrimitiveType, TypeNames } from './type';
 import { createType, isTypeArray, isTypeObject, isTypePrimitive, joinArray, joinObject, joinPrimitive } from './utils';
 
@@ -96,7 +96,7 @@ export function mergeNodeTypeToString(nodeType: NodeType): string {
             const { object, array, primitive } = classification(nodes);
             values.push(_mergeObjectType(...object), _mergeArrayType(...array), _mergePrimitiveType(...primitive));
             // key 值
-            const k = `${key}${nodes.length < nodeTypes.length ? '?' : ''}`;
+            const k = `${key}${nodes.length < nodeTypes.length && key !== DEFAULT_JSON_KEY ? '?' : ''}`;
             // 注释
             const docStart = _createDoc(nodes, 'docStart');
             // 尾注释

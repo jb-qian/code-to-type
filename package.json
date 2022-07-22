@@ -1,13 +1,13 @@
 {
     "name": "@ks/code-to-type",
-    "version": "0.0.9",
+    "version": "0.1.0",
     "description": "js代码字符串转ts-type的库",
     "main": "./dist/index.js",
     "types": "./@types",
     "scripts": {
         "test": "jest test/index.spec.ts",
         "build": "rm -rf dist && rm -rf @types && tsc",
-        "publish-ks": "npm publish --registry https://npm.corp.kuaishou.com"
+        "publish-ks": "npm run build && npm publish --registry https://npm.corp.kuaishou.com"
     },
     "keywords": [
         "ts",

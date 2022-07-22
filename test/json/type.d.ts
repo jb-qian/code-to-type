@@ -15,7 +15,7 @@ export type TestJson = (
           // 正则
           regExp?: RegExp;
           // 空对象
-          object?: { [key: string]: any };
+          object?: { [key: string]: any; test?: { [key: string]: any } };
           searchForm?: {
               symbol: SymbolConstructor;
               set: (num: string) => any;

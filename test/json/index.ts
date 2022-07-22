@@ -82,6 +82,9 @@ const testJson = [
             }
         },
     }, {
+        object: {
+            test: {}
+        },
         topicName: {
             // 整一堆乱七八糟的数据
             vue: [[1], [[1], [[{ op: { ag: [{ v: 1 }], vg: { o: 1 } } }]]], [{ c: 1 }], 1], // 1
