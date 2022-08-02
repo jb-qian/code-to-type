@@ -7,7 +7,7 @@
     "scripts": {
         "test": "jest test/index.spec.ts",
         "build": "rm -rf dist && rm -rf @types && tsc",
-        "publish-ks": "npm run build && npm publish --registry https://npm.corp.kuaishou.com"
+        "publish:npm": "npm run build && npm publish"
     },
     "keywords": [
         "ts",
@@ -15,6 +15,7 @@
         "type",
         "js2ts"
     ],
+    "repository": "npm/npm",
     "author": "songqian",
     "license": "ISC",
     "dependencies": {
